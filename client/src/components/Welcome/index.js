@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
+import { Jumbotron, FormGroup, FormControl, Button } from 'react-bootstrap';
 
 import Main from '../Welcome/Main';
 import './welcome.css';
@@ -24,35 +24,36 @@ class Welcome extends Component{
   handleSubmit(e) {
     e.preventDefault();
     console.log('sub');
-    this.state.name.length > 1 && this.setState({'submitted': true})
+    this.state.name.length > 0 && this.setState({'submitted': true})
   }
 
   render() {
     const submitted = this.state.submitted;
     const name = this.state.name;
-    console.log(name.length);
     return(
-      <div id='welcome'>
+      <div id='main-div'>
         {
-          name.length >= 1 && submitted ?
+          name.length > 0 && submitted ?
           <Main /> :
-          <form onSubmit={this.handleSubmit}>
-            <FormGroup
-              controlId="formBasicText"
-              // bsSize="sm"
-            >
-              <ControlLabel>Thank you for visiting. Please enter your name.</ControlLabel>
-              <FormControl
-                type="text"
-                value={this.state.name}
-                name="name"
-                placeholder="Enter text"
-                onChange={this.handleChange}
-              />
-              <FormControl.Feedback />
-            </FormGroup>
-            <Button onClick={this.handleSubmit}>Submit</Button>
-          </form>
+          <div id="welcome-main">
+            <Jumbotron>
+              <h1>Thank you for visiting!</h1>
+              <p>
+                Please enter your name
+              </p>
+              <form onSubmit={this.handleSubmit}>
+                <FormGroup controlId="formBasicText" >
+                  <FormControl
+                    type="text"
+                    value={this.state.name}
+                    name="name"
+                    onChange={this.handleChange}
+                  />
+                </FormGroup>
+                <Button onClick={this.handleSubmit}>Submit</Button>
+              </form>
+            </Jumbotron>
+          </div>
         }
       </div>
     )

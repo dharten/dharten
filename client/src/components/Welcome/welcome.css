@@ -1,3 +1,32 @@
+* {
+  text-align: center;
+}
+
+html, body {
+  height: 100%;
+  background-image: url(../../images/simon-migaj-551136-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#welcome-main {
+  height: 100%;
+}
+
 .form-control {
   width: 20% !important;
+}
+
+input {
+  margin: 0 auto;
+}
+
+.jumbotron {
+  background-color: #eeeeee4a;
+  position: relative;
+  transform: translateY(2em);
 }
