@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Jumbotron, FormGroup, FormControl, Button } from 'react-bootstrap';
 
-import Main from '../Welcome/Main';
-import './welcome.css';
+import Main from '../Main';
+import './headCount.css';
 
-class Welcome extends Component{
+class HeadCount extends Component{
   constructor() {
     super();
     this.state = {
@@ -35,7 +35,7 @@ class Welcome extends Component{
         {
           name.length > 0 && submitted ?
           <Main /> :
-          <div id="welcome-main">
+          <div id="HeadCount-main">
             <Jumbotron>
               <h1>Thank you for visiting!</h1>
               <p>
@@ -60,4 +60,4 @@ class Welcome extends Component{
   }
 }
 
-export default Welcome;
+export default HeadCount;

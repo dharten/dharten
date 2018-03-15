@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-import Welcome from "./components/Welcome";
+import HeadCount from "./components/HeadCount";
 import './styles.css';
 
 class App extends Component {
   render() {
-    return <Welcome />
+    return <HeadCount />
   }
 }
 

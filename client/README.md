@@ -739,7 +739,7 @@ The `public` folder is useful as a workaround for a number of less common cases:
 
 * You need a file with a specific name in the build output, such as [`manifest.webmanifest`](https://developer.mozilla.org/en-US/docs/Web/Manifest).
 * You have thousands of images and need to dynamically reference their paths.
-* You want to include a small script like [`pace.js`](http://github.hubspot.com/pace/docs/welcome/) outside of the bundled code.
+* You want to include a small script like [`pace.js`](http://github.hubspot.com/pace/docs/HeadCount/) outside of the bundled code.
 * Some library may be incompatible with Webpack and you have no other option but to include it as a `<script>` tag.
 
 Note that if you add a `<script>` that declares global variables, you also need to read the next section on using them.
@@ -1393,11 +1393,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
 
-it('renders welcome message', () => {
+it('renders HeadCount message', () => {
   const wrapper = shallow(<App />);
-  const welcome = <h2>Welcome to React</h2>;
-  // expect(wrapper.contains(welcome)).to.equal(true);
-  expect(wrapper.contains(welcome)).toEqual(true);
+  const HeadCount = <h2>HeadCount to React</h2>;
+  // expect(wrapper.contains(HeadCount)).to.equal(true);
+  expect(wrapper.contains(HeadCount)).toEqual(true);
 });
 ```
 
@@ -1407,7 +1407,7 @@ Nevertheless you can use a third-party assertion library like [Chai](http://chai
 Additionally, you might find [jest-enzyme](https://github.com/blainekasten/enzyme-matchers) helpful to simplify your tests with readable matchers. The above `contains` code can be written more simply with jest-enzyme.
 
 ```js
-expect(wrapper).toContainReact(welcome)
+expect(wrapper).toContainReact(HeadCount)
 ```
 
 To enable this, install `jest-enzyme`:

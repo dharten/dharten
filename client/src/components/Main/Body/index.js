@@ -22,6 +22,7 @@ function Body() {
 
     return(
       <div>
+        <h1>Welcome</h1>
         <Grid>
           <Row className="show-grid">
             <Col sm={6} md={3}>

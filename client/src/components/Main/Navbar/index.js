@@ -1,5 +1,8 @@
 import React from 'react';
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
+import {Link} from 'react-router-dom'
+
+import './navbar.css';
 
 function NavigationBar() {
   return(
@@ -36,7 +39,7 @@ function NavigationBar() {
             </NavItem>
           </Nav>
         </Navbar.Collapse>
-      </Navbar>;
+      </Navbar>
     </div>
   )
 }
