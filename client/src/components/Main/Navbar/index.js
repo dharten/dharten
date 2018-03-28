@@ -1,6 +1,6 @@
 import React from 'react';
 import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 import './navbar.css';
 
@@ -10,16 +10,16 @@ function NavigationBar() {
       <Navbar inverse collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="#brand">React-Bootstrap</a>
+            <NavItem eventKey={1}>
+              <Link to='/home'>Home</Link>
+            </NavItem>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav>
-            <NavItem eventKey={1} href="#">
-              Link
-            </NavItem>
-            <NavItem eventKey={2} href="#">
+            <Link to='/projects'>Projects</Link>
+            <NavItem eventKey={2} href="/projects-href">
               Link
             </NavItem>
             <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">

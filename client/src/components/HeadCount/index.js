@@ -15,6 +15,10 @@ class HeadCount extends Component{
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  // componentWillUnmount() {
+  //   console.log(this);
+  // }
+
   handleChange(e) {
     this.setState({
       [e.target.name]: e.target.value
@@ -23,7 +27,6 @@ class HeadCount extends Component{
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log('sub');
     this.state.name.length > 0 && this.setState({'submitted': true})
   }
 
@@ -34,7 +37,8 @@ class HeadCount extends Component{
       <div id='main-div'>
         {
           name.length > 0 && submitted ?
-          <Main /> :
+            <Main />
+            :
           <div id="HeadCount-main">
             <Jumbotron>
               <h1>Thank you for visiting!</h1>
@@ -48,6 +52,7 @@ class HeadCount extends Component{
                     value={this.state.name}
                     name="name"
                     onChange={this.handleChange}
+                    autoComplete='off'
                   />
                 </FormGroup>
                 <Button onClick={this.handleSubmit}>Submit</Button>
